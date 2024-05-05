@@ -1,1 +1,41 @@
+Day 3
+	1. Bubble Sort
+	2. Merge Sort
 
+	Till now we created threads using objects of the thread class
+
+		tObj = Thread(target=...,args = .....)
+	
+	Now we will see how to create a class which inherits Thread class
+
+	read varValue
+		perform operation
+		then assign
+
+	data+=1
+
+	--->data = data + 1
+
+	data sharing in same variable intermediately then data will lost
+	common data race condition
+
+	Critical Section
+	1 or 0 --> binary semaphorei or mutex or mutually exclusive
+
+	1 is getting so other will be zero
+
+	Counting Semaphore
+
+	Locking facility
+	If we use fun() then it wont get any error other if call fun then data will be corrupted
+
+	Message Passing Interface	is a protocol
+		mpi4py ---> 
+			pip install
+		one Window
+			mpi package for windows from microsoft
+
+	Try this Using globally & locally through lock
+
+		Using putty we can run this program through other ip
+	PASL library Parallel algorithm scheduling
