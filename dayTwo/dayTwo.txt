@@ -1,1 +1,81 @@
+Day 2
+	for multiple command we use | this is pipe 
+	
+	ls -l | more -5
+	
+	ls -l
+	command#1 ----> process #1
+		----> writes into the pipe(|)
+
+	more -5 ----> command#2 ----> process #2
+		----> takes/read from the pipe(|) 
+
+	In multiprocess module, there is class called Pipe
+		----> send(data to the pipe) ----> performs write operation
+		----> recv(data from the pipe) --> performs read operation
+
+	send & read are blocking in nature
+
+	Introduction to Multithreading in Python:
+		Yesterday we discussed on multiprocessing 
+		Within individual process, you can have multiple execution of control flow. This is basically dividing the process into multiple sub-tasks which can be executed concurrently
+	In other words, Multithreading is a programming technique that allow you to run multiple (control flow/tasks) simultaneously
+
+
+	People talk....
+		Your programs achieve some tasks....
+			---> we look at these task from your program utilization of your computer resources.
+			among the various resource....
+				-->CPU -->CPU intensive for multiprocessing
+					Web server is an app so we have to support multi support wait for client request the client get over process get over
+	Thread is light wait
+	Process have limited resource 100 connection will get more burden on machine 10 process 10 threads
+	Imagine the scenerio 
+	Web server i try to both multiprocess & multithreading 100 connection 100 client 
+	for full utilization we need both multithreading & multiprocessing
+				-->I/O---> Console, DiskIO, NetworkIO -->okay for multithreading 	
+
+		Multithreading can be used to improve the performance, of your application because it allows to take advantage of the multiple cores in your CPU
+		Python Multithreading library is loosely built on the concepts of threads provided by Java.
+
+		Multi-Programming
+			more than one program/process running simultaneously in single core machine
+		Multi-processing
+			more than one program/process running simultaneously in multi core machine
+		Multithreading
+			Within each program/process,you can have multiple execution of control flow. This is basically dividing the process into multiple sub-tasks which can be executed concurrently. that is why threads are also referred to as LWP(light weight process)
+
+		Ubuntu have many flavor mint & buntu
+
+		What is GIL?---->
+			Global Interpretor Lock...
+				One interper will work other things to interpretor will put lock
+
+				Python interpreter establishes a lock on the code it interprets so that it interprets one code one at a time. Because of this the integrity of your Python Interpreter is maintained. 
+				GIL is a mutex (Mutually Exclusive) Lock that prevents multiple threads from executing python bytecode at once. 
+				This ensures Python data structures are not corrputed by multiple threads simulataneously accessing and modifying them
+
+				Lots of people argue that this puts limitation on multi-threaded code execution in Python.
+
+			numpy code written in C
+			pandas code written in C++
+
+			In Multiprocessing no GIL
+			& if whole code in python then multithreading have GIL but they are written other language so there is no GIL
+	Use both multiprocessing & multithreading or you can use c & c++ library
+
+	MPI we discussed lately
+
+	module name is threading
+	import threading import thread
+
+	sys for system, argv for argument variable
+
+	Assignment1:
+	create list store 100 variable randomly input taken from user & through command line use bubble sort
+	fibonacci series using recursion through command line & input taken from user independently
+
+	Task to create multithreading for these assignment
+
+
 
