@@ -1,1 +1,45 @@
+Revision on Parallel Programming:
 
+	Parallel Computing, parellel processing or multi-processing is to enable or perform multiple tasks/programs to run simultaneously on multiple processsors.
+	What we temd to do is by splitting a single task into multiple, independant samller or sub-tasks. Where each sub-tasks is nothing but set of instructions which can run simultaneously on different processors
+
+	From your shell point of view...
+		man taskset
+
+			0001 -->1#bitmasking #only 1 processor
+			0011 -->3 --> #bit value mask command run 1 & 2 processor
+			0100 --> 4#run at 4th processor only
+			-p pid for run particular pid
+
+		taskset 1 ./testOne & #it is assigning which cpu
+		./cpu.py & #it is taking automatically
+		jobs
+		taskset -p 55
+		taskset -p 4 55
+		ps a
+		nproc
+
+
+		0111  1111 -->127
+		1111  1111 --> 255
+
+		--cpu-lists 0-7
+		for more info refer to manual page of taskset command
+			man taskset
+
+
+		If something is running in background then we cant use ctrl c then we have to use kill -2 [pid]	
+
+		kill -l 
+		man kill
+
+		wc -l fileName.out
+	
+
+		ps -af
+		man ps
+		ps -eLf
+		ps s
+		ps a
+		ps -L
+		ps u			
